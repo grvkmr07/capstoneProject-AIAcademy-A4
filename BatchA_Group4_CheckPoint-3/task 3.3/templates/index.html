@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Book Recommender</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+
+ <div class="recommender">
+	<h1>Book Recommendation</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('recommend')}}"method="post">
+    	<input type="text" name="userid" placeholder="UserID" required="required" />
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Recommend</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+<b><center><br><font color = #00a3e0> Built with <font color=#ff0000>♥</font> by:<br>
+</b>
+<p>Gokul &#128102;, Grace &#128103;, Gourav &#128102;, Gomathi &#128103;, Sabarish &#128102;</p>
+</center>
+
+ </div>
+
+
+</body>
+</html>
